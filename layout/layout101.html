@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        .hc {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top: 35px;
+        }
+        #logo {
+            width: 20%;
+            float: left;
+        }
+        #nav {
+            width: 60%;
+            float: left;
+        }
+        #nav li {
+            display: inline;
+            text-align: center;
+            margin: 10px;
+        }
+        #nav li a {
+            text-decoration: none;
+            color: rgb(102, 95, 95);
+            font-size: 20px
+        }
+        #login {
+            width: 20%;
+            float: left;
+        }
+
+        #banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(../layout/test/banner-bg2.png);
+            background-size: cover;
+            position: relative;
+        }
+        #banner .abab {
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        #banner h2 {
+            font-size: 35px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            padding: 200px;
+            text-align: center;
+            
+        }
+        #content {
+            width: 1130px;
+            height: 1200px;
+            margin: 0 auto;
+        }
+        .cont1 {
+            height: 600px;
+            position: relative;
+        }
+        .cont1 p {
+            text-align: center;
+        }
+        .cont1 p span {
+            width: 50px;
+            height: 20px;
+            background-color: #fff;
+            display: inline-block;
+            border-radius: 50px;
+            margin-top: 10px;
+
+        }
+        .cont1 h2 {
+            padding: 30px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        img {
+            max-width: 100%;
+            width: 70%;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+        }
+
+        .cont2 {
+            height: 600px;
+            background-color: #26c6da;
+            overflow: hidden;
+        }
+        .cont2 p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .boxcontrol {
+            width: 1050px;
+            height: 450px;
+            margin: 50px 60px;
+        }
+        .contentbox1 {
+            width: 500px;
+            height: 400px;
+            float: left;
+        }
+
+        .contentbox1-1 {
+            height: 50%;
+            background-color: #3d7aff;
+            margin: 2%;
+            position: relative;
+            background-image: url(../layout/test/cont2-img2.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 200px;
+            border-radius: 20px;
+        }
+        .contentbox1-2 {
+            height: 50%;
+            background-color: #6463ff;
+            margin: 2%;
+            position: relative;
+            background-image: url(../layout/test/cont2-img1.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 200px;
+            border-radius: 20px;
+        }
+        .contentbox2 {
+            width: 500px;
+            height: 412px;
+            background: #8c9697;
+            float: left;
+            margin: 1%;
+            background-color: #5470f8;
+            position: relative;
+            background-image: url(../layout/test/cont2-img3.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 400px;
+            border-radius: 20px;
+        }
+        .div1 {
+            padding: 20px;
+            color: #fff;
+        }
+        .div2 {
+            padding: 0 0 0 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .div3 {
+            padding: 20px;
+            color: #fff;
+            font-size: 13px;
+        }
+        .div4 {
+            width: 35%;
+            height: 60%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .div5 {
+            padding: 20px;
+            color: #fff;
+        }
+        .div6 {
+            padding: 0 0 0 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .div7 {
+            padding: 20px;
+            color: #fff;
+            font-size: 13px;
+        }
+        .div8 {
+            width: 35%;
+            height: 60%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .div9 {
+            padding: 20px;
+            color: #fff;
+        }
+        .div10 {
+            padding: 0 0 0 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .div11 {
+            padding: 20px;
+            color: #fff;
+            font-size: 13px;
+        }
+        .div12 {
+            width: 35%;
+            height: 60%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #footer {
+            width: 100%;
+            height: 235px;
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="hc">
+                <div id="logo">로고</div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="#">인플루언서 안내</a></li>
+                        <li><a href="#">광고수익 혜택</a></li>
+                        <li><a href="#">성장 지원 프로그램</a></li>
+                        <li><a href="#">브랜드 커넥트</a></li>
+                        <li><a href="#">공지</a></li>
+                    </ul>
+                </div>
+                <div id="login">인플루언서 로그인</div>
+            </div>
+        </header>
+        <aside id="banner">
+            <span class="abab">광고수익혜택</span>
+            <h2>인플루언서의 수익을 더 높여줄 특별한 광고가 제공됩니다.</h2>
+        </aside>
+        <section id="content">
+            <div class="cont1">
+                <p><span>new</span></p>
+                <h2>더 커진 수익과 효과적인 노출<br>새롭고 강력한 헤드뷰 광고를 선보입니다.</h2>
+                <figure class="figure">
+                    <img src="test/content-img1.png" alt="img">
+                </figure>
+            </div>
+            <div class="cont2">
+                <p>새로운 헤드뷰 광고 상품은 콘텐츠에 방해되지 않으면서도<br>
+                뛰어난 노출과 수익을 제공하는 신규 광고입니다.<br>
+            네이버에서 적극적인 창작 활동을 통해 더 좋아진 혜택을 경험해 보세요.</p>
+                <div class="boxcontrol">
+                    <div class="contentbox1">
+                        <div class="contentbox1-1">
+                            <div class="div1">인플루언서 대상</div>
+                            <div class="div2">인플루언서 홈 영역에<br> 일반 광고 제공</div>
+                            <div class="div3">자세히 알아보기</div>
+                            <div class="div4"></div>
+                        </div>
+                        <div class="contentbox1-2">
+                            <div class="div5">상위 인플루언서 대상</div>
+                            <div class="div6">더 높은 수익의<br>프리미엄 광고 제공</div>
+                            <div class="div7">자세히 알아보기</div>
+                            <div class="div8"></div>
+                        </div>
+                    </div>
+                    <div class="contentbox2">
+                        <div class="div9">우수 인플루언서 대상</div>
+                            <div class="div10">다양한 브랜드와 연결될 수 있는<br>브랜드 커넥트 제공</div>
+                            <div class="div11">자세히 알아보기</div>
+                            <div class="div12"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

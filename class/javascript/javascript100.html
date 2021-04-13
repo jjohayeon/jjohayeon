@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 문법100</title>
+</head>
+
+<body>
+    <script>
+        //01. 변수 : 데이터 저장소, 데이터 변경, 데이터 추가
+        {
+            var x = 100; //변수 x에 숫자 100을 저장
+            var y = 200; //변수 y에 숫자 200을 저장
+            var z = "javascript"; //변수 z에 문자 javascript를 저장
+
+            document.write("*** 01. 변수 *** <br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+            document.write(x + y, "<br>");
+            document.write(x % y, "<br><br>");
+        }
+
+        //02. 변수 : 변하는 데이터 저장소
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript"
+            x = 300;
+            y = 400;
+            z += "jquery";
+
+            document.write("*** 02. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+        }
+
+        //03. 상수 : 데이터 저장소, 변하지 않는 데이터
+        {
+            const x = 100;
+            const y = 200;
+            const z = "javascript";
+            //x = 200;
+            //y = 300;
+            //Assignment to constant variable.
+
+            document.write("*** 03. 상수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+
+        }
+
+        //04. 배열 : 데이터 저장소, 열개를 저장, 배열 선언 1
+        {
+            const arr1 = new Array();
+            arr1[0] = 100;
+            arr1[1] = 200;
+            arr1[2] = "javascript";
+
+            document.write("*** 04. 배열 ***<br>");
+            document.write(arr1[0], "<br>");
+            document.write(arr1[1], "<br>");
+            document.write(arr1[2], "<br><br>");
+        }
+
+        //05. 배열 : 데이터 저장소, 열개를 저장, 배열 선언 2
+        {
+            const arr2 = new Array(100, 200, "javascript");
+
+            document.write("*** 05. 배열 ***<br>");
+            document.write(arr2[0], "<br>");
+            document.write(arr2[1], "<br>");
+            document.write(arr2[2], "<br><br>");
+        }
+
+        //06. 배열 : 데이터 저장소, 열개를 저장, 배열 선언 3
+        {
+            const arr3 = [];
+            arr3[0] = 100;
+            arr3[1] = 200;
+            arr3[2] = "javascript";
+
+            document.write("*** 06. 배열 ***<br>");
+            document.write(arr3[0], "<br>");
+            document.write(arr3[1], "<br>");
+            document.write(arr3[2], "<br><br>");
+        }
+
+        //07. 배열 : 데이터 저장소, 열개를 저장, 배열 선언 4
+        {
+            const arr4 = [100, 200, "javascript"];
+            arr4[0] = 100;
+            arr4[1] = 200;
+            arr4[2] = "javascript";
+
+            document.write("*** 07. 배열 ***<br>");
+            document.write(arr4[0], "<br>");
+            document.write(arr4[1], "<br>");
+            document.write(arr4[2], "<br><br>");
+        }
+
+        //08. 2차 배열
+        {
+            const arr5 = [100, 200, ["javascript", "jquery"]];
+
+            document.write("*** 08. 2차배열 ***<br>");
+            document.write(arr5[0], "<br>");
+            document.write(arr5[1], "<br>");
+            document.write(arr5[2], "<br>");
+            document.write(arr5[2][0], "<br>");
+            document.write(arr5[2][1], "<br><br>");
+        }
+
+        //09. 배열 갯수
+        {
+            const arr6 = [100, 200, "javascript"];
+            document.write("*** 09. 배열 갯수 ***<br>");
+            document.write(arr6.length, "<br><br>")
+        }
+
+        //10. 배열 데이터 불러오기 (for)
+        {
+            const arr7 = [100, 200, 300, 400, 500];
+
+            document.write("*** 10. 배열 데이터 불러오기 ***<br>");
+            for (let i = 0; i < arr7.length; i++) {
+                document.write(arr7[i], "<br>");
+            }
+            document.write("<br>")
+        }
+
+        //11. 배열 데이터 불러오기 (forEach)
+        {
+            const arr8 = [100, 200, 300, 400, 500];
+
+            document.write("*** 11. 배열 데이터 불러오기 *** <br>");
+
+            arr8.forEach(function (el) {
+                document.write(el, "<br>")
+            });
+
+            document.write("<br>");
+
+            arr8.forEach(function (element, index, array) {
+                document.write(element, "<br>")
+                document.write(index, "<br>")
+                document.write(array, "<br>")
+            });
+
+            document.write("<br>");
+        }
+
+        //12. 배열 데이터 불러오기 (map) : 배열 요소를 추출하여 새 배열을 만듦
+
+        {
+            const arr9 = [100, 200, 300, 400, 500];
+
+            document.write("*** 12. 배열 데이터 불러오기 *** <br>");
+
+            //arr9.map(function(){})
+            arr9.map((el) => {
+                document.write(el, "<br>");
+            })
+
+            document.write("<br>");
+
+            arr9.map((element, index, array) => {
+                document.write(element, "<br>");
+                document.write(index, "<br>");
+                document.write(array, "<br>");
+            })
+
+            document.write("<br>");
+        }
+
+        //13. 배열 데이터 불러오기 (for in문)
+        {
+            const arr10 = [100, 200, 300, 400, 500];
+
+            document.write("*** 13. 배열 데이터 불러오기 *** <br>");
+            for (let i in arr10) {
+                document.write(arr10[i], "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+        //14. 배열 데이터 불러오기 (for of문)
+
+        {
+            const arr11 = [100, 200, 300, 400, 500];
+
+            document.write("*** 14. 배열 데이터 불러오기 *** <br>")
+
+            for (let i of arr11) {
+                document.write(i, "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+        //15. 배열 조회하기
+
+        {
+            const arr12 = [100, 200, "javascript"];
+            const search = "javascript";
+
+            document.write("*** 15. 배열 조회하기 *** <br>")
+
+            //for문
+            for (let i = 0; i < arr12.length; i++) {
+                if (search == arr12[i]) {
+                    document.write(search + "를 찾았습니다.<br><br>")
+                }
+            }
+
+            //forEach문
+            arr12.forEach(function (el) {
+                if (search == el) {
+                    document.write(search + "를 찾았습니다.<br><br>");
+                }
+            });
+
+            //map
+            arr12.map((el) => {
+                if (search == el) {
+                    document.write(search + "를 찾았습니다.<br><br>");
+                }
+            })
+        }
+
+        //16. 배열 펼침 연산자 (Spread Syntaxs)
+
+        {
+            const arr13 = [100, 200, "javascript"]
+
+            document.write("*** 16. 펼침 연산자 *** <br>")
+
+            document.write(arr13, "<br>");
+            document.write(...arr13, "<br><br>");
+        }
+
+
+        //17. 배열에서 최댓값 구하는법 
+        {
+            const arr14 = [100, 200, 500, 400, 300];
+            let max = 0;
+            //for (let i=0; i<arr14.length; i++){
+            //    if(max < arr14[i]){
+            //        max = arr14[i];
+            //     }
+            // }
+            //forEach문으로 
+            arr14.forEach((el) => {
+                if (max < el) {
+                    max = el;
+                }
+            });
+            document.write("***17.max값구하기***<br>");
+            document.write(max, "<br>");
+            document.write("<br>");
+        }
+
+        //18. 배열 Math로 최댓값 구하기
+        {
+            const arr15 = [100, 200, 300, 400, 500];
+
+            let max = Math.max(...arr15);
+
+            document.write("*** 18. 배열 최댓값 구하기 *** <br>")
+            document.write(max, "<br><br>");
+        }
+
+        //19. 배열 메서드 join() : 배열 요소 결합하여 문자열 만들기
+        {
+            const arr16 = [100, 200, 300, 400, 500];
+
+            document.write("*** 19. 배열 메서드 join()***, <br>")
+            document.write(arr16.join("*"), "<br>");
+            document.write(arr16.join("-"), "<br>");
+            document.write(arr16.join(""), "<br>");
+            document.write(arr16.join(" "), "<br><br>");
+
+        }
+
+        //20. 배열 메서드 reverse() : 배열 요소의 순서를 반대로 할 때
+        {
+            const arr17 = [100, 200, 300, 400, 500];
+
+            document.write("*** 20. 배열 메서드 reverse()***, <br>")
+            document.write(arr17.reverse(), "<br><br>");
+
+        }
+
+        //21. 배열 메서드 sort() : 배열 요소를 정렬할 때
+        {
+            const arr18 = [100, 200, 300, 400, 500];
+
+            document.write("*** 21. 배열 메서드 sort()***, <br>")
+            document.write(arr18.sort(), "<br>");
+            document.write(arr18.sort(function (a, b) {
+                return b - a
+            }), "<br><br>");
+        }
+
+
+        //22. 배열 메서드 slice() : 원하는 배열 요소를 가져올 때
+        {
+            const arr19 = [100, 200, 300, 400, 500];
+            document.write("*** 22. 배열 메서드 slice()***, <br>")
+            document.write(arr19.slice(1, 3), "<br>");
+            document.write(arr19.slice(1, 4), "<br>");
+            document.write(arr19.slice(1, 5), "<br>");
+            document.write(arr19.slice(1, -1), "<br>");
+            document.write(arr19.slice(1, -2), "<br>");
+            document.write(arr19.slice(1, -3), "<br><br>");
+        }
+
+        //23. 배열 메서드 concat() : 배열을 결합할 때
+        {
+            const arr20 = [100, 200, 300]
+            const arr21 = [400, 500, 600]
+
+            document.write("*** 23. 배열 메서드 concat()***, <br>")
+            document.write(arr20.concat(arr21), "<br><br>")
+        }
+
+
+        //24.배열 메서드 shift() : 배열의 첫 번째 요소를 제거할 때 
+        {
+            const arr22 = [100, 200, 300, 400, 500];
+
+            document.write("*** 24. 배열 메서드 shift()***, <br>")
+            document.write(arr22.shift(), "<br>");
+            document.write(arr22, "<br><br>");
+        }
+
+        //25. 배열 메서드 unshift() : 배열의 앞 부분에 요소를 추가할 때
+        {
+            const arr23 = [200, 300, 400, 500];
+
+            document.write("*** 25. 배열 메서드 unshift()***, <br>")
+            document.write(arr23.unshift(100), "<br>");
+            document.write(arr23, "<br><br>");
+        }
+
+        //26. 배열 메서드 pop() : 배열 마지막 요소를 제거할 때
+        {
+            const arr24 = [100, 200, 300, 400, 500]
+
+            document.write("*** 26. 배열 메서드 pop()***, <br>")
+            document.write(arr24.pop(), "<br>")
+            document.write(arr24, "<br><br>");
+        }
+
+        //27. 배열 메서드 push() : 배열 마지막 요소를 추가할 때 
+        {
+            const arr25 = [100, 200, 300, 400];
+
+            document.write("*** 27. 배열 메서드 push()***, <br>")
+            document.write(arr25.push(500), "<br>");
+            document.write(arr25, "<br><br>");
+        }
+
+        //28. 배열 메서드 splice() : 배열 요소를 다른 요소로 변경
+        {
+            const arr26 = [100, 200, 300, 400, 500];
+
+            document.write("*** 28. 배열 메서드 splice()***, <br>")
+            //document.write(arr26.splice(1), "<br>");
+            //document.write(arr26.splice(2), "<br>");
+            //document.write(arr26.splice(3), "<br>");
+            //document.write(arr26.splice(1,3), "<br>");
+            //document.write(arr26.splice(1,2), "<br>");
+            //document.write(arr26.splice(1,3,600), "<br>");
+            document.write(arr26.splice(1, 2, 201, 301), "<br>");
+            document.write(arr26, "<br>");
+
+        }
+    </script>
+</body>
+
+</html>

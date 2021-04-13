@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+        }
+
+        .hc {
+            width: 1200px;
+            height: 100px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 20%;
+            float: left;
+            color: #444;
+            margin-top: 30px;
+        }
+
+        .nav {
+            width: 60%;
+            float: left;
+            color: #444;
+            margin-top: 30px;
+        }
+
+        .nav li {
+            list-style: none;
+            font-size: 16px;
+            display: inline;
+            margin: 20px;
+
+        }
+
+        .nav li a {
+            text-decoration: none;
+            color: #444;
+        }
+
+        .login {
+            width: 20%;
+            float: left;
+            color: #444;
+            margin-top: 30px;
+        }
+
+        #banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(../layout/test/banner-bg2.png);
+            background-size: cover;
+        }
+
+        .bannerhead {
+            height: 60px;
+            background-color: #f1f3ff;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .bannerheadbox {
+            width: 800px;
+            margin: 0 auto;
+            padding-left: 150px;
+        }
+
+        .bannerhead li {
+            list-style: none;
+            text-align: center;
+        }
+
+        .bannerhead li a {
+            float: left;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #444;
+        }
+
+        .aa {
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #banner h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #banner p {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .expert {
+            width: 250px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #content {
+            width: 100%;
+            height: 500px;
+            background-color: #f1f3ff;
+            position: relative;
+        }
+
+        .contentbox {
+            width: 1000px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .box1 {
+            width: 50%;
+            height: 100%;
+            background-image: url(../layout/test/img1234.png);
+            background-size: cover;
+            float: left;
+        }
+
+        .box2 {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .box2-1 {
+            width: 100%;
+            height: 30%;
+            background-color: #fff;
+            float: left;
+            margin-bottom: 4%;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .box2-2 {
+            width: 100%;
+            height: 30%;
+            background-color: #fff;
+            float: left;
+            margin-bottom: 4%;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .box2-3 {
+            width: 100%;
+            height: 30%;
+            background-color: #fff;
+            float: left;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .text1 {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .text2 {
+            padding-left: 20px;
+        }
+
+        .text3 {
+            color: blue;
+            padding-left: 60%;
+            position: absolute;
+            top: 45px;
+        }
+
+        .text4 {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .text5 {
+            padding-left: 20px;
+        }
+
+        .text6 {
+            color: blue;
+            padding-left: 60%;
+            position: absolute;
+            top: 45px;
+        }
+
+        .text7 {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .text8 {
+            padding-left: 20px;
+        }
+
+        .text9 {
+            color: blue;
+            padding-left: 60%;
+            position: absolute;
+            top: 45px;
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            background-color: #444;
+            position: relative;
+        }
+
+        #footer > div {
+            text-align: center;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+        }
+
+        #footer .login {
+            width: 60px;
+            height: 20px;
+            background-color: #666;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #footer p {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="hc">
+                <div class="logo">로고</div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">인플루언서 안내</a></li>
+                        <li><a href="#">광고수익 혜택</a></li>
+                        <li><a href="#">성장 지원 프로그램</a></li>
+                        <li><a href="#">브랜드 커넥트</a></li>
+                        <li><a href="#">공지</a></li>
+                    </ul>
+                </div>
+                <div class="login">인플루언서 로그인</div>
+            </div>
+        </header>
+        <aside id="banner">
+            <div class="bannerhead">
+                <div class="bannerheadbox">
+                    <ul>
+                        <li><a href="#">크리에이터워크숍</a></li>
+                        <li><a href="#">슈퍼매드</a></li>
+                        <li><a href="#">엑스퍼트컨설팅</a></li>
+                        <li><a href="#">멤버십혜택</a></li>
+                        <li><a href="#">어워드</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="aa">엑스퍼트 컨설팅</span>
+            <h2>법률, 세무부터 동영상 제작까지!<br>
+                지식iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</h2>
+            <p>혼자서는 해결하기 어려웠던 문제들,<br>1인 최대 10만원의 엑스퍼트 </p>
+            <div class="expert">내 eXpert 쿠폰 확인하기</div>
+        </aside>
+        <section id="content">
+            <section class="contentbox">
+                <section class="box1"></section>
+                <section class="box2">
+                    <div class="box2-1">
+                        <div class="text1">이 이미지 쓰고 싶은데</div>
+                        <div class="text2">저작권에 문제 없을까요?</div>
+                        <div class="text3">법률 상담 받기</div>
+                    </div>
+                    <div class="box2-2">
+                        <div class="text4">이 이미지 쓰고 싶은데</div>
+                        <div class="text5">저작권에 문제 없을까요?</div>
+                        <div class="text6">법률 상담 받기</div>
+                    </div>
+                    <div class="box2-3">
+                        <div class="text7">이 이미지 쓰고 싶은데</div>
+                        <div class="text8">저작권에 문제 없을까요?</div>
+                        <div class="text9">법률 상담 받기</div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <footer id="footer">
+            <div>
+                <span class="top">TOP</span>
+            </div>
+            <div class="login">로그인</div>
+            <p>NAVER Copyright jjohayeon zipgagosipda</p>
+        </footer>
+    </div>
+</body>
+
+</html>

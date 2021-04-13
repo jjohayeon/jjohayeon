@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 200px;
+            background-color: #ffebee;
+        }
+
+        #banner {
+            width: 100%;
+            height: 600px;
+            background-color: #ffcdd2;
+        }
+
+        #contents {
+            width: 100%;
+            height: 800px;
+            background-color: #ef9a9a;
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            background-color: #e57373;
+        }
+
+        .container {
+            width: 1400px;
+            height: inherit;
+            background-color: rgba(255, 255, 255, 0.4);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #cont1 {
+            width: 1400px;
+            height: 400px;
+            background-color: #f8bbd0;
+        }
+
+        #cont2 {
+            width: 700px;
+            height: 400px;
+            float: left;
+            background-color: #f48fb1;
+            position: relative;
+        }
+
+        #cont3 {
+            width: 700px;
+            height: 400px;
+            float: left;
+            background-color: #f06292;
+        }
+
+        #fc1 {
+            width: 21%;
+            height: 100px;
+            margin: 2%;
+            background-color: #fce4ec;
+            float: left;
+        }
+
+
+
+        .more {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #cont2 li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 20px;
+        }
+
+        #cont2 li a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div class="container">
+                <div id="cont1"></div>
+                <div id="cont2">
+                    <h2>Web Publisher Notice</h2>
+                    <ul>
+                        <li><a href="#">display: inline과 display:block의 차이점은 무엇인가요?</a></li>
+                        <li><a href="#">display: inline과 display:block의 차이점은 무엇인가요?</a></li>
+                        <li><a href="#">display: inline과 display:block의 차이점은 무엇인가요?</a></li>
+                        <li><a href="#">display: inline과 display:block의 차이점은 무엇인가요?</a></li>
+                        <li><a href="#">display: inline과 display:block의 차이점은 무엇인가요?</a></li>
+                    </ul>
+                    <a href="#" class="more">더보기</a>
+                </div>
+                <div id="cont3"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div id="fc1"></div>
+                <div id="fc1"></div>
+                <div id="fc1"></div>
+                <div id="fc1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

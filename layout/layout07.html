@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout07
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #ede7f6;
+        }
+
+        #contents {
+            width: 100%;
+            height: 2000px;
+            background-color: #d1c4e9;
+        }
+
+        #contents #cont1 {
+            width: 100%;
+            height: 1000px;
+            background-color: #b39ddb;
+
+        }
+
+        #contents #cont2 {
+            width: 100%;
+            height: 500px;
+            background-color: #9575cd;
+        }
+
+        #contents #cont3 {
+            width: 100%;
+            height: 500px;
+            background-color: #7e57c2;
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #673ab7;
+        }
+
+        .container {
+            width: 1600px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+            /* 위 0px 아래0px 왼쪽 auto 오른쪽 auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <section id="contents">
+            <section id="cont1">
+                <div class="container"></div>
+            </section>
+            <section id="cont2">
+                <div class="container"></div>
+            </section>
+            <section id="cont3">
+                <div class="container"></div>
+            </section>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+
+</html>

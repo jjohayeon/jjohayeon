@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background: #e3f2fd;
+        }
+
+        #banner {
+            width: 100%;
+            height: 400px;
+            background: #bbdefb;
+        }
+
+        #content1 {
+            width: 100%;
+            height: 400px;
+            background: #90caf9;
+        }
+
+        .cont1-1 {
+            width: 30%;
+            height: 400px;
+            background: #1565c0;
+            float: left;
+        }
+
+        .cont1-2 {
+            width: 70%;
+            height: 200px;
+            float: left;
+            background: #1e88e5;
+
+        }
+
+        .cont1-3 {
+            width: 70%;
+            height: 200px;
+            float: left;
+            background: #1976d2;
+
+        }
+
+        #content2 {
+            width: 100%;
+            height: 300px;
+            background: #64b5f6;
+        }
+
+        .cont2-1 {
+            width: 400px;
+            height: 300px;
+            float: left;
+            background: #82b1ff;
+        }
+
+        .cont2-2 {
+            width: 400px;
+            height: 300px;
+            float: left;
+            background: #448aff;
+        }
+
+        .cont2-3 {
+            width: 400px;
+            height: 300px;
+            float: left;
+            background: #2979ff;
+        }
+
+        #content3 {
+            width: 86%;
+            height: 300px;
+            background: #42a5f5;
+            padding: 7%;
+        }
+
+        .container1 {
+            width: 23%;
+            background: #0d47a1;
+            float: left;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        .container2 {
+            width: 23%;
+            background: #0d47a1;
+            float: left;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        .container3 {
+            width: 23%;
+            background: #0d47a1;
+            float: left;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        .container4 {
+            width: 23%;
+            background: #0d47a1;
+            float: left;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background: #2196f3;
+        }
+
+        @media(max-width: 1200px) {
+            #wrap {
+                width: 100%;
+            }
+
+            .cont2-1 {
+                width: 50%;
+            }
+
+            .cont2-2 {
+                width: 50%;
+            }
+
+            .cont2-3 {
+                display: none;
+            }
+
+            .container1 {
+                width: 23%;
+            }
+
+            .container2 {
+                width: 23%;
+            }
+
+            .container3 {
+                width: 23%;
+            }
+
+            .container4 {
+                display: none;
+            }
+        }
+        @media(max-width: 1000px) {
+            #wrap {width: 100%;}
+            .cont2-1 {width: 100%;}
+            .cont2-2 {width: 100%;}
+            .container1 {}
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="banner"></div>
+        <div id="content1">
+            <div class="cont1-1"></div>
+            <div class="cont1-2"></div>
+            <div class="cont1-3"></div>
+        </div>
+        <div id="content2">
+            <div class="cont2-1"></div>
+            <div class="cont2-2"></div>
+            <div class="cont2-3"></div>
+        </div>
+        <div id="content3">
+            <div class="container1"></div>
+            <div class="container2"></div>
+            <div class="container3"></div>
+            <div class="container4"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>

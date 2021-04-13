@@ -1,0 +1,236 @@
+#wrap {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/header_bg.jpg);
+    background-repeat: repeat-x;
+    background-position: center;
+    /* background : url((../img/header_bg.jpg) repeat */
+
+}
+
+#contents {
+    width: 100%;
+    height: 800px;
+    background-color: #222;
+}
+
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
+
+.container {
+    width: 1000px;
+    height: inherit;
+    /* background-color: rgba(255,255,255,0.3); */
+    margin: 0 auto;
+}
+
+#cont-nav {
+    background-color: #f6fdff;
+}
+
+#cont-tit {
+    background-color: #eaf7fd;
+}
+
+#cont-ban {
+    background-color: #dceff7
+}
+
+#cont-cont {
+    height: 200px;
+    background-color: #777;
+}
+
+/* 헤더 */
+.header {}
+
+.header .header-menu {
+    text-align: right;
+}
+
+.header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+}
+
+.header .header-menu a:hover {
+    text-decoration: underline;
+}
+.header .header-title{
+    text-align :center;
+}
+
+.header .header-title h1 {
+    background-color: #4aa8d4;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.header .header-title p {
+    text-align: center;
+}
+.header .header-title p a {
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding : 10px 20px;
+}
+
+.header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+
+}
+.header .header-icon a {
+    width: 60px;
+    height: 60px;
+    background-image : url(../img/icon.png);
+    
+    display: inline-block;
+}
+
+.header .header-icon a.icon1 {background-position: 0px 0px;}
+.header .header-icon a.icon2 {background-position: 0px -60px;}
+.header .header-icon a.icon3 {background-position: 0px -120px;}
+.header .header-icon a.icon4 {background-position: 0px -180px;}
+
+.header .header-icon a.icon1:hover {
+    background-position: -60px 0;
+}
+.header .header-icon a.icon2:hover {
+    background-position: -60px -60px;
+}
+.header .header-icon a.icon3:hover {
+    background-position: -60px -120px;
+}
+.header .header-icon a.icon4:hover {
+    background-position: -60px -180px;
+}
+
+/* 전체 메뉴 */
+.nav {
+    overflow: hidden;
+    padding: 30px 0;
+}
+.nav > div {
+    float: left;
+    width: 40%;
+
+}
+
+.nav > div h3 {
+    font-size: 18px;
+    color: #25a2d0;
+    margin-bottom: 4px;
+}
+
+.nav>div:last-child {
+    width: 20%;
+}
+
+
+.nav>div ol {
+    overflow: hidden;
+
+}
+.nav>div ol li {
+    width: 50%;
+    float: left;
+
+}
+
+.nav>div ol li a:hover {
+    text-decoration: underline;
+}
+
+.nav>div:last-child ol li {
+    width: 100%;}
+
+/* float : left로 인한 영역 깨짐 (height:0) 방지법
+    1. 깨지는 영역에 똗깥이 float:left를 사용한다. (X) --> 모든 박스에 float:left를 사용하게 됩니다.
+    2. float의 성질을 차단하는 clear: both를 사용한다. (X) --> 어떤 영역이 깨졌는지 찾기 어려움
+    3. float을 사용한 상위 박스한테 overflow: hidden을 사용합니다. (O) --> 완벽한 방법은 아님
+    4. clearfix 속성을 만들어서 사용합니다. (O)
+*/
+
+
+/* 타이틀 */
+.tit {
+    position: relative;
+}
+
+.tit h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 5px 0;
+    letter-spacing: 2px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: #2c94c4;
+}
+
+.tit .btn {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/icon.png);
+    background-position:0 -600px;
+}
+
+/* 배너 */
+.ban {
+    position: relative;
+    padding: 20px 0;
+}
+
+.ban ul {
+    overflow: hidden;
+}
+.ban ul li.ban_img1 {
+    float: left;
+    width: 330px;
+}
+
+.ban ul li.ban_img2 {
+    float: left;
+    width: 330px;
+    text-align: center;
+}
+
+.ban ul li.ban_img3 {
+    float: left;
+    width: 330px;
+    text-align: right;
+}
+
+.ban .prev {
+    position: absolute;
+    left: -80px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: #000;
+}
+
+.ban .next {
+    position: absolute;
+    right: -80px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: #000;
+}
+

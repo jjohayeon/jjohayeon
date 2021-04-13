@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+
+        }
+
+        #main {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            width: 100%;
+            height: 200px;
+            background: #e1f5fe;
+        }
+        aside {
+            width: 30%;
+            height: 900px;
+            background: #b3e5fc;
+            float: left;
+        }
+        section {
+            width: 70%;
+            background-color: #81d4fa;
+            float: left;height: 300px;
+        }
+        footer {
+            width: 100%;
+            height: 200px;
+            background: #4fc3f7;
+            clear: both;
+        }
+        .sec1{background:#64b5f6;}
+        .sec2{background: #42a5f5;}
+        .sec3{background: #2196f3;}
+        @media (max-width: 1220px) {
+            #main{width: 100%;}
+            .sec1{height: 450px;}
+            .sec2{height: 450px;}
+            .sec3{width: 100%;}
+        }
+        @media (max-width: 1020px) {
+            #main{width: 100%;}
+            aside{width: 100%;height: 300px;}
+            .sec1{width: 50%;
+                height: 450px;}
+            .sec2{width: 50%;height: 450px;}
+        }
+        @media (max-width: 820px) {
+            #main{width: 100%;}
+            aside{width: 100%;height: 300px;}
+            .sec1{width: 100%;
+                height: 450px;}
+            .sec2{width: 100%;height: 450px;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header></header>
+            <aside></aside>
+            <section class="sec1"></section>
+            <section class="sec2"></section>
+            <section class="sec3"></section>
+            <footer></footer>
+        </main>
+    </div>
+</body>
+
+</html>

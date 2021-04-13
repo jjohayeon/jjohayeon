@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #main {}
+
+        #header {
+            height: 100px;
+            background: #e8eaf6;
+        }
+
+        #banner {
+            height: 300px;
+            background: #c5cae9;
+        }
+
+        #contents1 {
+            background: #9fa8da;
+            overflow: hidden;
+        }
+
+        .cont1-1 {
+            width: 30%;
+            height: 400px;
+            background: #3949ab;
+            float: left;
+        }
+
+        .cont1-2 {
+            width: 70%;
+            height: 200px;
+            background: #303f9f;
+            float: left;
+        }
+
+        .cont1-3 {
+            width: 70%;
+            height: 200px;
+            background: #283593;
+            float: left;
+        }
+
+        #contents2 {
+            background: #7986cb;
+            overflow: hidden;
+        }
+
+        .cont2-1 {
+            width: 400px;
+            height: 300px;
+            background: #e3f2fd;
+            float: left;
+        }
+        .cont2-2 {
+            width: 400px;
+            height: 300px;
+            background: #bbdefb;
+            float: left;
+        }
+        .cont2-3 {
+            width: 400px;
+            height: 300px;
+            background: #90caf9;
+            float: left;
+        }
+        
+        #contents3 {
+            height: 200px;
+            background: #5c6bc0;
+            padding: 5%;
+        }
+        #contents3 > article {
+            width: 20%;
+            height: 150px;
+            float: left;
+            margin: 2%;
+            background: #8c9eff;
+            border-radius: 10px;
+        }
+
+        #footer {
+            height: 100px;
+            background: #3f51b5;
+        }
+
+        @media(max-width:1220px){
+            #wrap {
+                width: 100%;
+            }
+            .cont2-1 {width: 50%;}
+            .cont2-2 {width: 50%;}
+            .cont2-3 {display: none;}
+            #contents3 > article {
+                width: 29%;
+            }
+            #contents3 > article:last-child {
+                display: none;
+            }
+        }
+        @media(max-width:900px) {
+            #wrap {
+                width: 100%;
+            }
+            .cont2-1 {
+                width: 100%;
+            }
+            .cont2-2 {
+                width: 100%;
+            }
+        }
+        @media(max-width:700px) {
+            #wrap {
+                width: 100%;
+            }
+            .cont1-1 {
+                width: 100%;
+            }
+            .cont1-2 {
+                width: 100%;
+            }
+            .cont1-3 {
+                width: 100%;
+            }
+            #contents3 {
+                height: 500px;
+            }
+            #contents3 > article {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main">
+            <header id="header"></header>
+            <aside id="banner"></aside>
+            <section id="contents1">
+                <article class="cont1-1"></article>
+                <article class="cont1-2"></article>
+                <article class="cont1-3"></article>
+            </section>
+            <section id="contents2">
+                <article class="cont2-1"></article>
+                <article class="cont2-2"></article>
+                <article class="cont2-3"></article>
+            </section>
+            <section id="contents3">
+                <article class="cont3-1"></article>
+                <article class="cont3-2"></article>
+                <article class="cont3-3"></article>
+                <article class="cont3-4"></article>
+            </section>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+</body>
+
+</html>

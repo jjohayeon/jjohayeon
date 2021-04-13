@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {}
+
+        #main {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #e0f7fa;
+        }
+
+        #banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(../layout/test/banner-bg2.png);
+            background-position: center;
+        }
+        #banner h2{
+            
+        }
+
+        #contents {
+            width: 100%;
+            height: 1200px;
+            background-color: #80deea;
+        }
+
+        #footer {
+            width: 100%;
+            height: 235px;
+            background-color: #4dd0e1;
+        }
+
+        .hc {
+            width: 1600px;
+            height: 100px;
+            background: #00b8d4;
+            margin: 0 auto;
+        }
+
+        .cc1 {
+            width: 1130px;
+            height: 600px;
+            background-color: #26c6da;
+            margin: 0 auto;
+        }
+
+        .cc2 {
+            width: 1130px;
+            height: 600px;
+            background-color: #00bcd4;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .cont1 {
+            width: 500px;
+            height: 200px;
+            background: #00acc1;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+
+
+        }
+
+        .cont2 {
+            width: 500px;
+            height: 200px;
+            background: #00acc1;
+            position: absolute;
+            left: 50px;
+            bottom: 40px;
+
+
+        }
+
+        .cont3 {
+            width: 500px;
+            height: 410px;
+            background: #0097a7;
+            position: absolute;
+            right: 50px;
+            top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main">
+            <header id="header">
+                <div class="hc"></div>
+            </header>
+            <aside id="banner">
+                <h2>인플루언서의 수익을 더 높여줄<br> 특별한 광고가 제공됩니다.</h2>
+            </aside>
+            <section id="contents">
+                <div class="cc1"></div>
+                <div class="cc2">
+                    <article class="cont1"></article>
+                    <article class="cont2"></article>
+                    <article class="cont3"></article>
+                </div>
+            </section>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+</body>
+
+</html>
